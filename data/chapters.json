@@ -1,0 +1,972 @@
+[
+  {
+    "id": "BOT-01",
+    "subject": "Botany",
+    "class_level": 11,
+    "name": "The Living World",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 4,
+    "high_yield_topics": ["Taxonomic Hierarchy", "Binomial Nomenclature", "Herbarium & Botanical Gardens"]
+  },
+  {
+    "id": "BOT-02",
+    "subject": "Botany",
+    "class_level": 11,
+    "name": "Biological Classification",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 8,
+    "high_yield_topics": ["Kingdom Monera & Fungi", "Viruses, Viroids & Lichens", "Protista"]
+  },
+  {
+    "id": "BOT-03",
+    "subject": "Botany",
+    "class_level": 11,
+    "name": "Plant Kingdom",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 9,
+    "high_yield_topics": ["Algae pigment classification", "Bryophytes lifecycle", "Pteridophytes & Gymnosperms", "Alternation of Generations"]
+  },
+  {
+    "id": "BOT-04",
+    "subject": "Botany",
+    "class_level": 11,
+    "name": "Morphology of Flowering Plants",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 10,
+    "high_yield_topics": ["Root, Stem & Leaf modifications", "Inflorescence & Flower structure", "Placentation & Fruit types", "Families: Solanaceae, Fabaceae"]
+  },
+  {
+    "id": "BOT-05",
+    "subject": "Botany",
+    "class_level": 11,
+    "name": "Anatomy of Flowering Plants",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 8,
+    "high_yield_topics": ["Meristematic vs Permanent Tissues", "Dicot & Monocot root/stem/leaf anatomy", "Secondary growth"]
+  },
+  {
+    "id": "BOT-06",
+    "subject": "Botany",
+    "class_level": 11,
+    "name": "Cell: The Unit of Life",
+    "weightage": "High",
+    "avg_questions": 4,
+    "est_study_hours": 10,
+    "high_yield_topics": ["Prokaryotic vs Eukaryotic cells", "Endomembrane system", "Mitochondria, Chloroplasts & Ribosomes", "Nucleus & Chromosomes"]
+  },
+  {
+    "id": "BOT-07",
+    "subject": "Botany",
+    "class_level": 11,
+    "name": "Cell Cycle and Cell Division",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 7,
+    "high_yield_topics": ["Phases of Cell Cycle (G1, S, G2, M)", "Prophase I stages of Meiosis (Leptotene to Diakinesis)", "Significance of Mitosis and Meiosis"]
+  },
+  {
+    "id": "BOT-08",
+    "subject": "Botany",
+    "class_level": 11,
+    "name": "Transport in Plants",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 5,
+    "high_yield_topics": ["Water potential & Osmosis", "Plasmolysis & Imbibition", "Transpiration pull & Phloem translocation"]
+  },
+  {
+    "id": "BOT-09",
+    "subject": "Botany",
+    "class_level": 11,
+    "name": "Mineral Nutrition",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 5,
+    "high_yield_topics": ["Essential macro and micronutrients", "Deficiency symptoms & Critical concentration", "Biological Nitrogen Fixation & Nitrogenase enzyme"]
+  },
+  {
+    "id": "BOT-10",
+    "subject": "Botany",
+    "class_level": 11,
+    "name": "Photosynthesis in Higher Plants",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 10,
+    "high_yield_topics": ["Light Reaction & Z-scheme", "Calvin Cycle (C3)", "C4 pathway & Photorespiration", "Blackman's Law of Limiting Factors"]
+  },
+  {
+    "id": "BOT-11",
+    "subject": "Botany",
+    "class_level": 11,
+    "name": "Respiration in Plants",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 8,
+    "high_yield_topics": ["Glycolysis (EMP pathway)", "Fermentation", "Krebs Cycle & Electron Transport System (ETS)", "Respiratory Quotient (RQ)"]
+  },
+  {
+    "id": "BOT-12",
+    "subject": "Botany",
+    "class_level": 11,
+    "name": "Plant Growth and Development",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 6,
+    "high_yield_topics": ["Auxins, Gibberellins, Cytokinins", "Ethylene & Abscisic acid (ABA)", "Photoperiodism & Vernalization"]
+  },
+  {
+    "id": "BOT-13",
+    "subject": "Botany",
+    "class_level": 12,
+    "name": "Sexual Reproduction in Flowering Plants",
+    "weightage": "High",
+    "avg_questions": 4,
+    "est_study_hours": 10,
+    "high_yield_topics": ["Microsporogenesis & Megasporogenesis", "Pollination agents & Outbreeding devices", "Double fertilization", "Endosperm & Embryo development"]
+  },
+  {
+    "id": "BOT-14",
+    "subject": "Botany",
+    "class_level": 12,
+    "name": "Principles of Inheritance and Variation",
+    "weightage": "High",
+    "avg_questions": 5,
+    "est_study_hours": 12,
+    "high_yield_topics": ["Mendelian Laws & Dihybrid Cross", "Incomplete dominance & Codominance", "Linkage & Recombination", "Genetic Disorders (Pedigree, Sickle cell, Thalassemia)"]
+  },
+  {
+    "id": "BOT-15",
+    "subject": "Botany",
+    "class_level": 12,
+    "name": "Molecular Basis of Inheritance",
+    "weightage": "High",
+    "avg_questions": 6,
+    "est_study_hours": 14,
+    "high_yield_topics": ["DNA structure & Replication fork", "Transcription & Genetic code", "Translation mechanism", "Lac Operon & Human Genome Project"]
+  },
+  {
+    "id": "BOT-16",
+    "subject": "Botany",
+    "class_level": 12,
+    "name": "Strategies for Enhancement in Food Production (Plants)",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 5,
+    "high_yield_topics": ["Plant Breeding for disease resistance", "Biofortification", "Single Cell Protein (SCP) & Tissue Culture"]
+  },
+  {
+    "id": "BOT-17",
+    "subject": "Botany",
+    "class_level": 12,
+    "name": "Microbes in Human Welfare",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 5,
+    "high_yield_topics": ["Microbes in household products", "Sewage treatment (Primary & Secondary)", "Biogas production & Biofertilizers"]
+  },
+  {
+    "id": "BOT-18",
+    "subject": "Botany",
+    "class_level": 12,
+    "name": "Biotechnology: Principles and Processes",
+    "weightage": "High",
+    "avg_questions": 4,
+    "est_study_hours": 9,
+    "high_yield_topics": ["Restriction Endonucleases & Ligases", "pBR322 Cloning vector details", "Gel electrophoresis & PCR steps", "Bioreactors"]
+  },
+  {
+    "id": "BOT-19",
+    "subject": "Botany",
+    "class_level": 12,
+    "name": "Biotechnology and its Applications",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 7,
+    "high_yield_topics": ["Bt cotton & RNA interference (RNAi)", "Genetically engineered Insulin", "Gene Therapy (ADA deficiency)", "Transgenic animals & Ethical issues"]
+  },
+  {
+    "id": "BOT-20",
+    "subject": "Botany",
+    "class_level": 12,
+    "name": "Organisms and Populations",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 6,
+    "high_yield_topics": ["Adaptations (Kangaroo rat, Desert plants)", "Population growth models (Exponential & Logistic)", "Population interactions (Mutualism, Parasitism, Competition)"]
+  },
+  {
+    "id": "BOT-21",
+    "subject": "Botany",
+    "class_level": 12,
+    "name": "Ecosystem",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 6,
+    "high_yield_topics": ["Productivity (GPP & NPP)", "Ecological Pyramids", "Nutrient Cycling & Ecological Succession"]
+  },
+  {
+    "id": "BOT-22",
+    "subject": "Botany",
+    "class_level": 12,
+    "name": "Biodiversity and Conservation",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 5,
+    "high_yield_topics": ["Levels of biodiversity", "Species-Area relationship (Alexander von Humboldt)", "Causes of loss (Evil Quartet)", "In-situ vs Ex-situ conservation"]
+  },
+  {
+    "id": "BOT-23",
+    "subject": "Botany",
+    "class_level": 12,
+    "name": "Environmental Issues",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 5,
+    "high_yield_topics": ["Air Pollution & Electrostatic Precipitator", "Water Pollution & BOD", "Biomagnification & Eutrophication", "Ozone depletion & Greenhouse effect"]
+  },
+  {
+    "id": "ZOO-01",
+    "subject": "Zoology",
+    "class_level": 11,
+    "name": "Animal Kingdom",
+    "weightage": "High",
+    "avg_questions": 4,
+    "est_study_hours": 12,
+    "high_yield_topics": ["Porifera to Chordata characteristics", "Coelom, Symmetry & Germ layers", "Mammals, Aves & Reptiles diagnostic traits"]
+  },
+  {
+    "id": "ZOO-02",
+    "subject": "Zoology",
+    "class_level": 11,
+    "name": "Structural Organisation in Animals",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 7,
+    "high_yield_topics": ["Epithelial tissue types", "Connective tissue (Bone, Cartilage, Blood)", "Cockroach / Frog morphology & organ systems"]
+  },
+  {
+    "id": "ZOO-03",
+    "subject": "Zoology",
+    "class_level": 11,
+    "name": "Biomolecules",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 9,
+    "high_yield_topics": ["Amino acids & Protein primary/secondary structure", "Carbohydrates & Lipids", "Enzyme kinetics (Km, competitive inhibitors, lock-and-key)"]
+  },
+  {
+    "id": "ZOO-04",
+    "subject": "Zoology",
+    "class_level": 11,
+    "name": "Digestion and Absorption",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 6,
+    "high_yield_topics": ["Human digestive system anatomy", "Digestive enzymes & Pancreatic juice action", "Absorption of fats (Chylomicrons, Lacteals) & Disorders"]
+  },
+  {
+    "id": "ZOO-05",
+    "subject": "Zoology",
+    "class_level": 11,
+    "name": "Breathing and Exchange of Gases",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 7,
+    "high_yield_topics": ["Respiratory volumes & capacities (TV, IRV, ERV, RV)", "Oxygen-hemoglobin dissociation curve", "Regulation of respiration & disorders (Asthma, Emphysema)"]
+  },
+  {
+    "id": "ZOO-06",
+    "subject": "Zoology",
+    "class_level": 11,
+    "name": "Body Fluids and Circulation",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 8,
+    "high_yield_topics": ["Blood groups (ABO, Rh)", "Cardiac cycle & ECG waves (P, QRS, T)", "Double circulation & Blood pressure regulation"]
+  },
+  {
+    "id": "ZOO-07",
+    "subject": "Zoology",
+    "class_level": 11,
+    "name": "Excretory Products and their Elimination",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 8,
+    "high_yield_topics": ["Structure of Nephron", "Mechanism of Urine formation & Counter-current mechanism", "RAAS system & ANF regulation"]
+  },
+  {
+    "id": "ZOO-08",
+    "subject": "Zoology",
+    "class_level": 11,
+    "name": "Locomotion and Movement",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 7,
+    "high_yield_topics": ["Sliding filament theory (Actin & Myosin)", "Human skeletal system bones count", "Joint types & Disorders (Myasthenia gravis, Tetany)"]
+  },
+  {
+    "id": "ZOO-09",
+    "subject": "Zoology",
+    "class_level": 11,
+    "name": "Neural Control and Coordination",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 7,
+    "high_yield_topics": ["Neuron structure & Impulse conduction", "Synaptic transmission", "Human brain parts (Forebrain, Midbrain, Hindbrain)"]
+  },
+  {
+    "id": "ZOO-10",
+    "subject": "Zoology",
+    "class_level": 11,
+    "name": "Chemical Coordination and Integration",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 8,
+    "high_yield_topics": ["Pituitary, Thyroid, Parathyroid hormones", "Adrenal cortex and medulla secretions", "Mechanism of hormone action (peptide vs steroid)"]
+  },
+  {
+    "id": "ZOO-11",
+    "subject": "Zoology",
+    "class_level": 12,
+    "name": "Reproduction in Organisms",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 4,
+    "high_yield_topics": ["Asexual reproduction types (Budding, Gemmules, Zoospores)", "Vegetative propagules", "Sexual lifecycle events"]
+  },
+  {
+    "id": "ZOO-12",
+    "subject": "Zoology",
+    "class_level": 12,
+    "name": "Human Reproduction",
+    "weightage": "High",
+    "avg_questions": 4,
+    "est_study_hours": 10,
+    "high_yield_topics": ["Male and Female reproductive systems", "Spermatogenesis & Oogenesis comparisons", "Menstrual cycle hormone surge (LH surge)", "Fertilization, Cleavage & Implantation"]
+  },
+  {
+    "id": "ZOO-13",
+    "subject": "Zoology",
+    "class_level": 12,
+    "name": "Reproductive Health",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 6,
+    "high_yield_topics": ["Contraceptive methods (IUDs, Oral pills)", "MTP (Medical Termination of Pregnancy)", "STIs and Assisted Reproductive Technologies (ART, IVF, ZIFT, ICSI)"]
+  },
+  {
+    "id": "ZOO-14",
+    "subject": "Zoology",
+    "class_level": 12,
+    "name": "Evolution",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 9,
+    "high_yield_topics": ["Origin of Life & Miller-Urey experiment", "Homologous vs Analogous organs (Adaptive radiation)", "Hardy-Weinberg equilibrium formula", "Human evolution sequence"]
+  },
+  {
+    "id": "ZOO-15",
+    "subject": "Zoology",
+    "class_level": 12,
+    "name": "Human Health and Disease",
+    "weightage": "High",
+    "avg_questions": 4,
+    "est_study_hours": 10,
+    "high_yield_topics": ["Infectious diseases (Typhoid, Malaria lifecycle, Amoebiasis)", "Innate & Acquired immunity (Antibody structure IgG/IgA)", "AIDS lifecycle & Cancer properties", "Drugs and alcohol abuse"]
+  },
+  {
+    "id": "ZOO-16",
+    "subject": "Zoology",
+    "class_level": 12,
+    "name": "Strategies for Enhancement in Food Production (Animals)",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 4,
+    "high_yield_topics": ["Animal breeding (Inbreeding vs Outbreeding)", "MOET (Multiple Ovulation Embryo Transfer)", "Apiculture & Fisheries"]
+  },
+  {
+    "id": "PHY-01",
+    "subject": "Physics",
+    "class_level": 11,
+    "name": "Units and Measurements",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 5,
+    "high_yield_topics": ["Dimensional analysis & conversions", "Significant figures & Error analysis (Percentage error)"]
+  },
+  {
+    "id": "PHY-02",
+    "subject": "Physics",
+    "class_level": 11,
+    "name": "Motion in a Straight Line",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 7,
+    "high_yield_topics": ["Kinematic equations of uniformly accelerated motion", "v-t and x-t graphs", "Relative velocity in 1D"]
+  },
+  {
+    "id": "PHY-03",
+    "subject": "Physics",
+    "class_level": 11,
+    "name": "Motion in a Plane",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 8,
+    "high_yield_topics": ["Vector addition, dot and cross products", "Projectile motion formulas (H, R, T)", "Uniform circular motion & centripetal acceleration"]
+  },
+  {
+    "id": "PHY-04",
+    "subject": "Physics",
+    "class_level": 11,
+    "name": "Laws of Motion",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 10,
+    "high_yield_topics": ["Free body diagrams (FBD)", "Friction (Static, Kinetic, Rolling)", "Banking of roads & Circular dynamics"]
+  },
+  {
+    "id": "PHY-05",
+    "subject": "Physics",
+    "class_level": 11,
+    "name": "Work, Energy and Power",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 9,
+    "high_yield_topics": ["Work-Energy Theorem", "Conservative vs Non-conservative forces", "Collisions in 1D and 2D (Elastic & Inelastic)"]
+  },
+  {
+    "id": "PHY-06",
+    "subject": "Physics",
+    "class_level": 11,
+    "name": "System of Particles and Rotational Motion",
+    "weightage": "High",
+    "avg_questions": 4,
+    "est_study_hours": 12,
+    "high_yield_topics": ["Center of Mass coordinates", "Torque and Angular momentum conservation", "Moment of Inertia of standard bodies", "Rolling motion without slipping"]
+  },
+  {
+    "id": "PHY-07",
+    "subject": "Physics",
+    "class_level": 11,
+    "name": "Gravitation",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 7,
+    "high_yield_topics": ["Universal law & Variation of g with altitude/depth", "Gravitational potential and potential energy", "Orbital and Escape velocity", "Kepler's laws"]
+  },
+  {
+    "id": "PHY-08",
+    "subject": "Physics",
+    "class_level": 11,
+    "name": "Mechanical Properties of Solids",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 5,
+    "high_yield_topics": ["Stress-Strain curve", "Hooke's law & Young's modulus", "Bulk & Shear modulus, Poisson's ratio"]
+  },
+  {
+    "id": "PHY-09",
+    "subject": "Physics",
+    "class_level": 11,
+    "name": "Mechanical Properties of Fluids",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 7,
+    "high_yield_topics": ["Pascal's law & Archimedes principle", "Bernoulli's theorem & applications", "Viscosity & Stokes' law", "Surface tension & Capillarity"]
+  },
+  {
+    "id": "PHY-10",
+    "subject": "Physics",
+    "class_level": 11,
+    "name": "Thermal Properties of Matter",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 6,
+    "high_yield_topics": ["Thermal expansion & Specific heat capacity", "Calorimetry & Latent heat", "Newton's law of cooling & Stefan's law"]
+  },
+  {
+    "id": "PHY-11",
+    "subject": "Physics",
+    "class_level": 11,
+    "name": "Thermodynamics",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 9,
+    "high_yield_topics": ["First Law of Thermodynamics (Q = dU + W)", "Isothermal, Adiabatic, Isobaric, Isochoric processes", "Carnot engine efficiency & Second Law"]
+  },
+  {
+    "id": "PHY-12",
+    "subject": "Physics",
+    "class_level": 11,
+    "name": "Kinetic Theory of Gases",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 5,
+    "high_yield_topics": ["RMS speed and Gas laws", "Degrees of freedom & Law of equipartition of energy", "Mean free path"]
+  },
+  {
+    "id": "PHY-13",
+    "subject": "Physics",
+    "class_level": 11,
+    "name": "Oscillations (SHM)",
+    "weightage": "High",
+    "avg_questions": 2,
+    "est_study_hours": 7,
+    "high_yield_topics": ["Simple Harmonic Motion equations & energy", "Simple pendulum and spring-mass systems", "Damped & Forced oscillations, Resonance"]
+  },
+  {
+    "id": "PHY-14",
+    "subject": "Physics",
+    "class_level": 11,
+    "name": "Waves",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 8,
+    "high_yield_topics": ["Speed of sound (Laplace correction)", "Standing waves in organ pipes and strings", "Beats and Doppler effect"]
+  },
+  {
+    "id": "PHY-15",
+    "subject": "Physics",
+    "class_level": 12,
+    "name": "Electric Charges and Fields",
+    "weightage": "High",
+    "avg_questions": 2,
+    "est_study_hours": 7,
+    "high_yield_topics": ["Coulomb's Law & Electric field due to dipole", "Gauss's Theorem & applications (Infinitely long wire, Plane sheet, Spherical shell)"]
+  },
+  {
+    "id": "PHY-16",
+    "subject": "Physics",
+    "class_level": 12,
+    "name": "Electrostatic Potential and Capacitance",
+    "weightage": "High",
+    "avg_questions": 2,
+    "est_study_hours": 7,
+    "high_yield_topics": ["Electric potential due to point charge & dipole", "Equipotential surfaces", "Parallel plate capacitor with dielectric", "Combination of capacitors & Energy stored"]
+  },
+  {
+    "id": "PHY-17",
+    "subject": "Physics",
+    "class_level": 12,
+    "name": "Current Electricity",
+    "weightage": "High",
+    "avg_questions": 4,
+    "est_study_hours": 11,
+    "high_yield_topics": ["Ohm's law, Drift velocity & Resistivity", "Kirchhoff's Rules & Wheatstone bridge", "EMF, Internal resistance & Cell combinations", "Potentiometer & Meter bridge"]
+  },
+  {
+    "id": "PHY-18",
+    "subject": "Physics",
+    "class_level": 12,
+    "name": "Moving Charges and Magnetism",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 8,
+    "high_yield_topics": ["Biot-Savart Law & Ampere's Circuital Law", "Force on moving charge (Lorentz force)", "Torque on a current loop & Moving Coil Galvanometer"]
+  },
+  {
+    "id": "PHY-19",
+    "subject": "Physics",
+    "class_level": 12,
+    "name": "Magnetism and Matter",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 4,
+    "high_yield_topics": ["Bar magnet as equivalent solenoid", "Earth's magnetic elements", "Dia, Para and Ferromagnetic substance classification"]
+  },
+  {
+    "id": "PHY-20",
+    "subject": "Physics",
+    "class_level": 12,
+    "name": "Electromagnetic Induction",
+    "weightage": "High",
+    "avg_questions": 2,
+    "est_study_hours": 6,
+    "high_yield_topics": ["Faraday's & Lenz's Law", "Motional EMF", "Self and Mutual Inductance"]
+  },
+  {
+    "id": "PHY-21",
+    "subject": "Physics",
+    "class_level": 12,
+    "name": "Alternating Current",
+    "weightage": "High",
+    "avg_questions": 2,
+    "est_study_hours": 6,
+    "high_yield_topics": ["Peak, RMS & Average values of AC", "Series LCR circuit, Resonance & Power factor", "AC Transformer formulas & losses"]
+  },
+  {
+    "id": "PHY-22",
+    "subject": "Physics",
+    "class_level": 12,
+    "name": "Electromagnetic Waves",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 4,
+    "high_yield_topics": ["Displacement current", "EM spectrum wavelength and frequencies order"]
+  },
+  {
+    "id": "PHY-23",
+    "subject": "Physics",
+    "class_level": 12,
+    "name": "Ray Optics and Optical Instruments",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 11,
+    "high_yield_topics": ["Total Internal Reflection (TIR)", "Lens maker's formula & Prism refraction", "Compound Microscope and Astronomical Telescope"]
+  },
+  {
+    "id": "PHY-24",
+    "subject": "Physics",
+    "class_level": 12,
+    "name": "Wave Optics",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 7,
+    "high_yield_topics": ["Huygens' Principle", "Young's Double Slit Experiment (YDSE)", "Diffraction due to single slit"]
+  },
+  {
+    "id": "PHY-25",
+    "subject": "Physics",
+    "class_level": 12,
+    "name": "Dual Nature of Radiation and Matter",
+    "weightage": "High",
+    "avg_questions": 2,
+    "est_study_hours": 6,
+    "high_yield_topics": ["Photoelectric effect & Einstein's equation", "de Broglie wavelength relation"]
+  },
+  {
+    "id": "PHY-26",
+    "subject": "Physics",
+    "class_level": 12,
+    "name": "Atoms",
+    "weightage": "High",
+    "avg_questions": 2,
+    "est_study_hours": 5,
+    "high_yield_topics": ["Rutherford's alpha-scattering experiment", "Bohr's model of Hydrogen atom & Spectral lines radius/energy formulas"]
+  },
+  {
+    "id": "PHY-27",
+    "subject": "Physics",
+    "class_level": 12,
+    "name": "Nuclei",
+    "weightage": "High",
+    "avg_questions": 2,
+    "est_study_hours": 5,
+    "high_yield_topics": ["Mass defect & Binding energy curve", "Nuclear fission and fusion", "Radioactive decay laws"]
+  },
+  {
+    "id": "PHY-28",
+    "subject": "Physics",
+    "class_level": 12,
+    "name": "Semiconductor Electronics",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 8,
+    "high_yield_topics": ["Intrinsic and Extrinsic semiconductors (p-n junction)", "Half-wave and Full-wave rectifiers", "Zener diode as voltage regulator", "Logic gates (AND, OR, NOT, NAND, NOR)"]
+  },
+  {
+    "id": "CHM-01",
+    "subject": "Chemistry",
+    "class_level": 11,
+    "name": "Some Basic Concepts of Chemistry",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 6,
+    "high_yield_topics": ["Mole concept & Stoichiometry", "Molarity, Molality, Normality", "Limiting reagent"]
+  },
+  {
+    "id": "CHM-02",
+    "subject": "Chemistry",
+    "class_level": 11,
+    "name": "Structure of Atom",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 8,
+    "high_yield_topics": ["Bohr's model & Hydrogen spectrum", "Quantum numbers (n, l, m, s)", "Aufbau, Hund's rule & Pauli's principle"]
+  },
+  {
+    "id": "CHM-03",
+    "subject": "Chemistry",
+    "class_level": 11,
+    "name": "Classification of Elements and Periodicity",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 6,
+    "high_yield_topics": ["Ionization enthalpy trends", "Electron gain enthalpy & Electronegativity", "Atomic & Ionic radius"]
+  },
+  {
+    "id": "CHM-04",
+    "subject": "Chemistry",
+    "class_level": 11,
+    "name": "Chemical Bonding and Molecular Structure",
+    "weightage": "High",
+    "avg_questions": 4,
+    "est_study_hours": 12,
+    "high_yield_topics": ["VSEPR Theory & Molecular geometry", "Hybridization (sp, sp2, sp3, sp3d)", "Molecular Orbital Theory (MOT) & Bond order", "Dipole moment & Hydrogen bonding"]
+  },
+  {
+    "id": "CHM-05",
+    "subject": "Chemistry",
+    "class_level": 11,
+    "name": "States of Matter: Gases and Liquids",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 5,
+    "high_yield_topics": ["Ideal gas equation (PV = nRT)", "Dalton's law of partial pressures", "Van der Waals equation for real gases"]
+  },
+  {
+    "id": "CHM-06",
+    "subject": "Chemistry",
+    "class_level": 11,
+    "name": "Chemical Thermodynamics",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 9,
+    "high_yield_topics": ["First law & Enthalpy of reaction", "Hess's Law", "Gibbs Free Energy & Spontaneity criteria", "Second law & Entropy"]
+  },
+  {
+    "id": "CHM-07",
+    "subject": "Chemistry",
+    "class_level": 11,
+    "name": "Equilibrium",
+    "weightage": "High",
+    "avg_questions": 4,
+    "est_study_hours": 12,
+    "high_yield_topics": ["Le Chatelier's Principle", "pH calculation of acids/bases", "Buffer solutions & Henderson-Hasselbalch equation", "Solubility Product (Ksp) & Common Ion effect"]
+  },
+  {
+    "id": "CHM-08",
+    "subject": "Chemistry",
+    "class_level": 11,
+    "name": "Redox Reactions",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 5,
+    "high_yield_topics": ["Oxidation number determination", "Balancing redox equations (Ion-electron method)"]
+  },
+  {
+    "id": "CHM-09",
+    "subject": "Chemistry",
+    "class_level": 11,
+    "name": "Hydrogen",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 4,
+    "high_yield_topics": ["Isotopes of hydrogen (Protium, Deuterium, Tritium)", "Hydrides classification", "Hard and soft water & Hydrogen peroxide (H2O2)"]
+  },
+  {
+    "id": "CHM-10",
+    "subject": "Chemistry",
+    "class_level": 11,
+    "name": "s-Block Elements (Alkali & Alkaline Earth Metals)",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 5,
+    "high_yield_topics": ["Anomalous properties of Li and Be", "Compounds of sodium and calcium (NaOH, Na2CO3, CaO, Plaster of Paris)"]
+  },
+  {
+    "id": "CHM-11",
+    "subject": "Chemistry",
+    "class_level": 11,
+    "name": "Some p-Block Elements (Group 13 & 14)",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 6,
+    "high_yield_topics": ["Inert pair effect", "Diborane structure & Borax bead test", "Allotropes of carbon & Silicones"]
+  },
+  {
+    "id": "CHM-12",
+    "subject": "Chemistry",
+    "class_level": 11,
+    "name": "Organic Chemistry: Basic Principles & Techniques (GOC)",
+    "weightage": "High",
+    "avg_questions": 4,
+    "est_study_hours": 12,
+    "high_yield_topics": ["IUPAC Nomenclature", "Inductive, Mesomeric, Hyperconjugation effects", "Carbocation & Carbanion stability", "Isomerism (Structural & Stereoisomerism)"]
+  },
+  {
+    "id": "CHM-13",
+    "subject": "Chemistry",
+    "class_level": 11,
+    "name": "Hydrocarbons",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 10,
+    "high_yield_topics": ["Alkanes (Wurtz reaction, Free radical halogenation)", "Alkenes (Markovnikov vs Anti-Markovnikov addition, Ozonolysis)", "Alkynes (Acidic nature)", "Benzene (Electrophilic aromatic substitution, Friedel-Crafts)"]
+  },
+  {
+    "id": "CHM-14",
+    "subject": "Chemistry",
+    "class_level": 11,
+    "name": "Environmental Chemistry",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 4,
+    "high_yield_topics": ["Tropospheric pollutants & Acid rain", "Photochemical smog vs Classical smog", "Green chemistry principles"]
+  },
+  {
+    "id": "CHM-15",
+    "subject": "Chemistry",
+    "class_level": 12,
+    "name": "Solid State",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 6,
+    "high_yield_topics": ["Bragg's equation & Unit cells (SCC, BCC, FCC)", "Packing efficiency & Density calculation", "Defects (Frenkel, Schottky, F-centers)"]
+  },
+  {
+    "id": "CHM-16",
+    "subject": "Chemistry",
+    "class_level": 12,
+    "name": "Solutions",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 8,
+    "high_yield_topics": ["Raoult's law & Ideal/Non-ideal solutions", "Colligative properties (Delta Tb, Delta Tf, Osmotic pressure)", "Van't Hoff factor (i)"]
+  },
+  {
+    "id": "CHM-17",
+    "subject": "Chemistry",
+    "class_level": 12,
+    "name": "Electrochemistry",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 10,
+    "high_yield_topics": ["Nernst equation & EMF calculation", "Kohlrausch's law & Molar conductivity", "Faraday's laws of electrolysis", "Standard hydrogen electrode (SHE)"]
+  },
+  {
+    "id": "CHM-18",
+    "subject": "Chemistry",
+    "class_level": 12,
+    "name": "Chemical Kinetics",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 8,
+    "high_yield_topics": ["Rate law & Order of reaction (Zero & First order)", "Half-life period formulas", "Arrhenius equation & Activation energy"]
+  },
+  {
+    "id": "CHM-19",
+    "subject": "Chemistry",
+    "class_level": 12,
+    "name": "Surface Chemistry",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 5,
+    "high_yield_topics": ["Physisorption vs Chemisorption", "Freundlich adsorption isotherm", "Colloids, Tyndall effect & Hardy-Schulze rule"]
+  },
+  {
+    "id": "CHM-20",
+    "subject": "Chemistry",
+    "class_level": 12,
+    "name": "General Principles of Isolation of Elements (Metallurgy)",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 5,
+    "high_yield_topics": ["Concentration of ores (Froth flotation)", "Ellingham diagram interpretation", "Extraction of Fe, Cu, Al (Hall-Heroult process)"]
+  },
+  {
+    "id": "CHM-21",
+    "subject": "Chemistry",
+    "class_level": 12,
+    "name": "p-Block Elements (Group 15 to 18)",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 10,
+    "high_yield_topics": ["Nitrogen anomalous properties & Haber process", "Oxoacids of phosphorus and sulfur", "Interhalogen compounds & Xenon fluorides"]
+  },
+  {
+    "id": "CHM-22",
+    "subject": "Chemistry",
+    "class_level": 12,
+    "name": "d- and f-Block Elements",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 8,
+    "high_yield_topics": ["Transition element properties (Color, Magnetic, Catalytic)", "Potassium permanganate (KMnO4) & Dichromate (K2Cr2O7) reactions", "Lanthanoid contraction"]
+  },
+  {
+    "id": "CHM-23",
+    "subject": "Chemistry",
+    "class_level": 12,
+    "name": "Coordination Compounds",
+    "weightage": "High",
+    "avg_questions": 4,
+    "est_study_hours": 10,
+    "high_yield_topics": ["IUPAC naming of coordination complexes", "Werner's Theory & Isomerism", "Valence Bond Theory (VBT) & Crystal Field Theory (CFT)", "Color and magnetic properties"]
+  },
+  {
+    "id": "CHM-24",
+    "subject": "Chemistry",
+    "class_level": 12,
+    "name": "Haloalkanes and Haloarenes",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 8,
+    "high_yield_topics": ["SN1 vs SN2 reaction mechanisms", "Optical activity & Inversion of configuration", "Electrophilic substitution in haloarenes"]
+  },
+  {
+    "id": "CHM-25",
+    "subject": "Chemistry",
+    "class_level": 12,
+    "name": "Alcohols, Phenols and Ethers",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 9,
+    "high_yield_topics": ["Preparation of alcohols (Hydration, Hydroboration)", "Lucas test & Oxidation of alcohols", "Phenol reactions (Kolbe, Reimer-Tiemann, Nitration)", "Williamson Ether Synthesis"]
+  },
+  {
+    "id": "CHM-26",
+    "subject": "Chemistry",
+    "class_level": 12,
+    "name": "Aldehydes, Ketones and Carboxylic Acids",
+    "weightage": "High",
+    "avg_questions": 4,
+    "est_study_hours": 12,
+    "high_yield_topics": ["Nucleophilic addition reactions", "Aldol Condensation & Cannizzaro reaction", "Tollens' and Fehling's tests", "Acidity of carboxylic acids (HVZ reaction)"]
+  },
+  {
+    "id": "CHM-27",
+    "subject": "Chemistry",
+    "class_level": 12,
+    "name": "Amines and Diazonium Salts",
+    "weightage": "High",
+    "avg_questions": 3,
+    "est_study_hours": 8,
+    "high_yield_topics": ["Basicity of amines in gas vs aqueous phase", "Hoffmann Bromamide degradation", "Carbylamine test & Hinsberg test", "Diazonium salt reactions (Sandmeyer, Gattermann)"]
+  },
+  {
+    "id": "CHM-28",
+    "subject": "Chemistry",
+    "class_level": 12,
+    "name": "Biomolecules (Chemistry)",
+    "weightage": "Medium",
+    "avg_questions": 2,
+    "est_study_hours": 6,
+    "high_yield_topics": ["Glucose and Fructose structures & tests", "Peptide bond & Denaturation of proteins", "Vitamins & Deficiency diseases", "Nucleic acids (DNA vs RNA)"]
+  },
+  {
+    "id": "CHM-29",
+    "subject": "Chemistry",
+    "class_level": 12,
+    "name": "Polymers",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 4,
+    "high_yield_topics": ["Addition vs Condensation polymers", "Nylon-6,6, Dacron, Bakelite, Melamine", "Biodegradable polymers (PHBV, Nylon-2-nylon-6)"]
+  },
+  {
+    "id": "CHM-30",
+    "subject": "Chemistry",
+    "class_level": 12,
+    "name": "Chemistry in Everyday Life",
+    "weightage": "Medium",
+    "avg_questions": 1,
+    "est_study_hours": 4,
+    "high_yield_topics": ["Drugs classification (Antacids, Antihistamines, Tranquilizers, Antibiotics)", "Artificial sweetening agents", "Soaps and synthetic detergents"]
+  }
+]
