@@ -1,0 +1,40 @@
+/* Custom styles for NEETFlow */
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.nav-tab.active {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(168, 85, 247, 0.25));
+  color: #ffffff;
+  border: 1px solid rgba(129, 140, 248, 0.4);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Task Checkbox Custom Style */
+.task-checkbox:checked {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+
+/* Card hover animation */
+.interactive-card {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.interactive-card:hover {
+  transform: translateY(-2px);
+}

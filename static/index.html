@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEETFlow - 4-Subject Dynamic Prep & Test Arena</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            neet: {
+              botany: '#10b981',
+              zoology: '#06b6d4',
+              physics: '#6366f1',
+              chemistry: '#f59e0b',
+              revision: '#ec4899',
+              dark: '#0f172a',
+              card: '#1e293b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- Top Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <div>
+          <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-indigo-300 bg-clip-text text-transparent">NEETFlow</span>
+          <span class="ml-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">4 Subjects • Custom Timeline</span>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-950/60 p-1.5 rounded-xl border border-slate-800">
+        <button onclick="switchTab('daily-plan')" id="tab-daily-plan" class="nav-tab active px-3.5 py-1.5 rounded-lg text-sm font-semibold transition-all">📅 Daily Roadmap</button>
+        <button onclick="switchTab('hour-guide')" id="tab-hour-guide" class="nav-tab px-3.5 py-1.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition-all">⏱️ Hour Guide</button>
+        <button onclick="switchTab('test-arena')" id="tab-test-arena" class="nav-tab px-3.5 py-1.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition-all">📝 Test Arena</button>
+        <button onclick="switchTab('mistakes')" id="tab-mistakes" class="nav-tab px-3.5 py-1.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition-all">📓 Mistake Log</button>
+        <button onclick="switchTab('syllabus')" id="tab-syllabus" class="nav-tab px-3.5 py-1.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition-all">📚 Syllabus (97 Ch)</button>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <button onclick="openTimelineModal()" class="px-4 py-2 rounded-xl text-sm font-bold bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white shadow-md shadow-indigo-500/25 transition-all flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+          <span id="btn-timeline-text">Generate Timeline</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
+
+    <!-- Active Timeline Hero Banner -->
+    <section id="hero-timeline" class="mb-8 p-6 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-900 to-indigo-950/40 border border-slate-800 shadow-xl relative overflow-hidden">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span id="hero-timeline-name" class="text-xs uppercase tracking-wider font-bold text-indigo-400">Loading Timeline...</span>
+          </div>
+          <h1 id="hero-title" class="text-2xl sm:text-3xl font-extrabold text-white">6 Months NEET Crash Roadmap</h1>
+          <p id="hero-desc" class="text-slate-400 text-sm mt-1">Complete all 4 subjects (Botany, Zoology, Physics, Chemistry) with built-in spaced repetition revisions.</p>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div onclick="openTimelineModal()" class="bg-slate-950/70 border border-slate-800/80 hover:border-indigo-500/60 cursor-pointer p-3.5 rounded-xl transition group">
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-slate-400 font-medium">Timeline Length</span>
+              <span class="text-[10px] text-indigo-400 font-bold opacity-80 group-hover:opacity-100">✎ Edit n</span>
+            </div>
+            <div id="stat-total-days" class="text-xl font-bold text-white mt-0.5">180 Days</div>
+          </div>
+          <div class="bg-slate-950/70 border border-slate-800/80 p-3.5 rounded-xl">
+            <span class="text-xs text-slate-400 font-medium">Target Study / Day</span>
+            <div id="stat-daily-hours" class="text-xl font-bold text-indigo-400 mt-0.5">10.0 Hours</div>
+          </div>
+          <div class="bg-slate-950/70 border border-slate-800/80 p-3.5 rounded-xl">
+            <span class="text-xs text-slate-400 font-medium">Tasks Completed</span>
+            <div id="stat-progress-tasks" class="text-xl font-bold text-emerald-400 mt-0.5">0 / 0</div>
+          </div>
+          <div class="bg-slate-950/70 border border-slate-800/80 p-3.5 rounded-xl">
+            <span class="text-xs text-slate-400 font-medium">Hours Completed</span>
+            <div id="stat-progress-hours" class="text-xl font-bold text-purple-400 mt-0.5">0.0 hrs</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subject Color Bar Legend -->
+      <div class="mt-6 pt-5 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-4 text-xs font-semibold">
+          <span class="flex items-center gap-1.5 text-emerald-400"><span class="w-3 h-3 rounded-md bg-emerald-500"></span> Botany (1.75h)</span>
+          <span class="flex items-center gap-1.5 text-cyan-400"><span class="w-3 h-3 rounded-md bg-cyan-500"></span> Zoology (1.75h)</span>
+          <span class="flex items-center gap-1.5 text-indigo-400"><span class="w-3 h-3 rounded-md bg-indigo-500"></span> Physics (2.5h)</span>
+          <span class="flex items-center gap-1.5 text-amber-400"><span class="w-3 h-3 rounded-md bg-amber-500"></span> Chemistry (2.5h)</span>
+          <span class="flex items-center gap-1.5 text-pink-400"><span class="w-3 h-3 rounded-md bg-pink-500"></span> Revision (1.5h)</span>
+        </div>
+        <div class="text-xs text-slate-400 font-medium">
+          Spaced Repetition: <span class="text-slate-200 font-mono">Day +1, +3, +7, +21</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 1: DAILY PLAN & ROADMAP -->
+    <section id="view-daily-plan" class="tab-view block space-y-6">
+      <!-- Day Selector Carousel / Header -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 bg-slate-900 border border-slate-800 p-4 rounded-xl">
+        <div class="flex items-center gap-3">
+          <button onclick="changeDay(-1)" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <div>
+            <h2 id="current-day-label" class="text-lg font-bold text-white">Day 1 of 180</h2>
+            <p id="current-date-label" class="text-xs text-slate-400">Scheduled: 2026-11-17</p>
+          </div>
+          <button onclick="changeDay(1)" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+        <div class="flex items-center gap-3 w-full sm:w-auto">
+          <label class="text-xs text-slate-400 font-medium whitespace-nowrap">Jump to Day:</label>
+          <input type="number" id="input-jump-day" min="1" max="180" value="1" onchange="jumpToDay(this.value)" class="w-20 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-700 text-sm font-bold text-center focus:outline-none focus:border-indigo-500" />
+          <button onclick="openStudyLogModal()" class="px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-200 border border-slate-700 transition">
+            ⏱️ Log Actual Hours
+          </button>
+        </div>
+      </div>
+
+      <!-- Daily Tasks List -->
+      <div class="grid grid-cols-1 gap-4" id="daily-tasks-container">
+        <!-- Tasks will be injected by app.js -->
+        <div class="p-8 text-center text-slate-500">Loading daily tasks...</div>
+      </div>
+    </section>
+
+    <!-- TAB 2: HOUR GUIDE & CALCULATOR -->
+    <section id="view-hour-guide" class="tab-view hidden space-y-6">
+      <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+        <h2 class="text-xl font-bold text-white mb-2">NEET Subject-Based Hour Calculator</h2>
+        <p class="text-slate-400 text-sm mb-6">
+          NEET consists of 720 marks. Biology carries 360 marks (50%), Physics 180 (25%), and Chemistry 180 (25%). Adjust the slider below to see the optimal daily and weekly hours needed to crack your target score.
+        </p>
+
+        <!-- Slider -->
+        <div class="mb-8 p-6 bg-slate-950 rounded-xl border border-slate-800/80">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm font-semibold text-slate-300">How many hours can you dedicate daily?</span>
+            <span id="slider-hours-display" class="text-2xl font-black text-indigo-400 font-mono">10.0 Hours/Day</span>
+          </div>
+          <input type="range" id="slider-hours" min="4" max="14" step="0.5" value="10" oninput="updateHourGuide(this.value)" class="w-full h-2.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" />
+          <div class="flex justify-between text-xs text-slate-500 mt-2 font-mono">
+            <span>4 hrs (Light / School)</span>
+            <span>8 hrs (Standard)</span>
+            <span>10 hrs (Recommended)</span>
+            <span>14 hrs (Intense Dropper)</span>
+          </div>
+        </div>
+
+        <!-- Calculated Subject Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4" id="guide-cards">
+          <!-- Botany Card -->
+          <div class="p-5 rounded-xl bg-slate-950/80 border border-emerald-500/30">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Botany</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400">180 Marks</span>
+            </div>
+            <div id="guide-botany-hours" class="text-2xl font-black text-white font-mono">1.75 hrs</div>
+            <p class="text-xs text-slate-400 mt-2">NCERT reading, diagrams, plant kingdom tables, genetics mechanisms.</p>
+          </div>
+
+          <!-- Zoology Card -->
+          <div class="p-5 rounded-xl bg-slate-950/80 border border-cyan-500/30">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider">Zoology</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400">180 Marks</span>
+            </div>
+            <div id="guide-zoology-hours" class="text-2xl font-black text-white font-mono">1.75 hrs</div>
+            <p class="text-xs text-slate-400 mt-2">Human physiology organ systems, hormonal pathways, cell biology.</p>
+          </div>
+
+          <!-- Physics Card -->
+          <div class="p-5 rounded-xl bg-slate-950/80 border border-indigo-500/30">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Physics</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-400">180 Marks</span>
+            </div>
+            <div id="guide-physics-hours" class="text-2xl font-black text-white font-mono">2.50 hrs</div>
+            <p class="text-xs text-slate-400 mt-2">45 mins theory + 30-40 numericals daily, mechanics, electrodynamics.</p>
+          </div>
+
+          <!-- Chemistry Card -->
+          <div class="p-5 rounded-xl bg-slate-950/80 border border-amber-500/30">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Chemistry</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-amber-500/10 text-amber-400">180 Marks</span>
+            </div>
+            <div id="guide-chemistry-hours" class="text-2xl font-black text-white font-mono">2.50 hrs</div>
+            <p class="text-xs text-slate-400 mt-2">Physical formulas, Organic mechanisms (GOC), Inorganic NCERT highlights.</p>
+          </div>
+
+          <!-- Revision Card -->
+          <div class="p-5 rounded-xl bg-slate-950/80 border border-pink-500/30">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-pink-400 uppercase tracking-wider">Revision & Test</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-pink-500/10 text-pink-400">Spaced Rec</span>
+            </div>
+            <div id="guide-revision-hours" class="text-2xl font-black text-white font-mono">1.50 hrs</div>
+            <p class="text-xs text-slate-400 mt-2">Active recall, formula sheets, Day +1/+3/+7 revision, mistake re-testing.</p>
+          </div>
+        </div>
+
+        <!-- Weekly Summary -->
+        <div class="mt-6 p-4 rounded-xl bg-indigo-950/30 border border-indigo-800/40 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">📊</span>
+            <div>
+              <span class="text-sm font-bold text-indigo-300">Total Weekly Output Commitment:</span>
+              <span id="guide-weekly-hours" class="ml-2 font-mono font-bold text-white">70.0 Hours / Week</span>
+            </div>
+          </div>
+          <span class="text-xs text-indigo-400 font-medium">Covers full syllabus in ~135 days + 45 days grand mocks</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: TEST ARENA & MOCK EXAM -->
+    <section id="view-test-arena" class="tab-view hidden space-y-6">
+      <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-800">
+          <div>
+            <h2 class="text-xl font-bold text-white">Interactive NEET Test Arena</h2>
+            <p class="text-slate-400 text-sm mt-1">
+              Supports both standard <strong>Multiple Choice (+4, -1)</strong> and active <strong>Write-in / Recall answers</strong>.
+            </p>
+          </div>
+
+          <!-- Test Filters & Controls -->
+          <div class="flex flex-wrap items-center gap-3">
+            <select id="select-test-subject" onchange="loadTestQuestions()" class="px-3.5 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm text-slate-200 font-semibold focus:outline-none focus:border-indigo-500">
+              <option value="All">All 4 Subjects (Full Mock)</option>
+              <option value="Botany">Botany Only</option>
+              <option value="Zoology">Zoology Only</option>
+              <option value="Physics">Physics Only</option>
+              <option value="Chemistry">Chemistry Only</option>
+            </select>
+
+            <button onclick="startTestTimer()" id="btn-timer-toggle" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-sm font-mono text-emerald-400 border border-slate-700 flex items-center gap-2">
+              <span>⏱️ Timer:</span>
+              <span id="test-timer-display">15:00</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Questions Arena Container -->
+        <form id="test-form" onsubmit="submitTest(event)" class="space-y-6">
+          <div id="test-questions-list" class="space-y-4">
+            <!-- Questions injected by app.js -->
+            <div class="p-8 text-center text-slate-500">Loading questions...</div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-6 border-t border-slate-800 flex items-center justify-between">
+            <div class="text-xs text-slate-400">
+              Marking Scheme: <span class="text-emerald-400 font-bold">+4</span> for correct, <span class="text-rose-400 font-bold">-1</span> for incorrect, <span class="text-slate-300">0</span> for unattempted.
+            </div>
+            <button type="submit" class="px-6 py-2.5 rounded-xl font-bold bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/30 transition">
+              Submit & Grade Answers
+            </button>
+          </div>
+        </form>
+
+        <!-- Test Result Display Modal / Card (Hidden by default) -->
+        <div id="test-results-panel" class="hidden mt-8 p-6 rounded-xl bg-slate-950 border border-indigo-500/40">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <span>🏆</span> Performance Scorecard
+            </h3>
+            <button onclick="closeTestResults()" class="text-xs text-slate-400 hover:text-white">✕ Close</button>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+            <div class="p-3 bg-slate-900 rounded-lg text-center">
+              <span class="text-xs text-slate-400">Your Score</span>
+              <div id="res-score" class="text-2xl font-black text-indigo-400 font-mono">0 / 0</div>
+            </div>
+            <div class="p-3 bg-slate-900 rounded-lg text-center">
+              <span class="text-xs text-slate-400">Accuracy</span>
+              <div id="res-accuracy" class="text-2xl font-black text-emerald-400 font-mono">0%</div>
+            </div>
+            <div class="p-3 bg-slate-900 rounded-lg text-center">
+              <span class="text-xs text-slate-400">Correct (+4)</span>
+              <div id="res-correct" class="text-2xl font-black text-emerald-400 font-mono">0</div>
+            </div>
+            <div class="p-3 bg-slate-900 rounded-lg text-center">
+              <span class="text-xs text-slate-400">Incorrect (-1)</span>
+              <div id="res-incorrect" class="text-2xl font-black text-rose-400 font-mono">0</div>
+            </div>
+          </div>
+
+          <div id="res-explanations-list" class="space-y-3 pt-4 border-t border-slate-800">
+            <!-- Graded explanations injected here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: MISTAKE LOG (NOTEBOOK) -->
+    <section id="view-mistakes" class="tab-view hidden space-y-6">
+      <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+        <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
+          <div>
+            <h2 class="text-xl font-bold text-white">Automated Mistake Notebook</h2>
+            <p class="text-slate-400 text-sm mt-1">Every wrong answer is automatically logged here. Review and resolve them before the exam.</p>
+          </div>
+          <button onclick="loadMistakes()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300">
+            🔄 Refresh Log
+          </button>
+        </div>
+
+        <div id="mistakes-list" class="space-y-4">
+          <!-- Mistakes injected by app.js -->
+          <div class="p-8 text-center text-slate-500">No mistakes logged yet! Keep practicing.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: SYLLABUS EXPLORER (97 CHAPTERS) -->
+    <section id="view-syllabus" class="tab-view hidden space-y-6">
+      <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-slate-800">
+          <div>
+            <h2 class="text-xl font-bold text-white">Full NEET Syllabus (97 Chapters)</h2>
+            <p class="text-slate-400 text-sm mt-1">Categorized by Subject, Class 11/12, and NEET Marks Weightage.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <select id="syllabus-filter-subject" onchange="filterSyllabus()" class="px-3.5 py-1.5 rounded-xl bg-slate-950 border border-slate-700 text-sm text-slate-200">
+              <option value="ALL">All Subjects</option>
+              <option value="Botany">Botany</option>
+              <option value="Zoology">Zoology</option>
+              <option value="Physics">Physics</option>
+              <option value="Chemistry">Chemistry</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="syllabus-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Chapters injected here -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL: Generate / Customize Timeline -->
+  <div id="modal-timeline" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 shadow-2xl relative">
+      <button onclick="closeTimelineModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">✕</button>
+      
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+          ⏱️
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white">Setup Your NEET Timeline</h3>
+          <p class="text-xs text-slate-400">Reverse-engineers all 4 subjects to fit your remaining time.</p>
+        </div>
+      </div>
+
+      <form onsubmit="handleCreateTimeline(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Timeline Plan Name</label>
+          <input type="text" id="input-plan-name" required value="6-Month NEET Crash Course" class="w-full px-3.5 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-indigo-500" />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <div class="flex items-center justify-between mb-1">
+              <label class="block text-xs font-semibold text-slate-300">Timeline Length (n Days)</label>
+              <span id="timeline-months-preview" class="text-[10px] text-indigo-400 font-mono font-bold">~6.0 Months</span>
+            </div>
+            <div class="relative">
+              <input type="number" id="input-total-days" min="5" max="1000" value="180" oninput="handleDaysInputChange(this.value)" required class="w-full px-3.5 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm font-bold text-white focus:outline-none focus:border-indigo-500 pr-16" placeholder="e.g. 45, 75, 180" />
+              <span class="absolute right-3.5 top-2.5 text-xs text-slate-500 font-bold">Days</span>
+            </div>
+            <!-- Quick preset buttons for n days -->
+            <div class="flex flex-wrap gap-1.5 mt-2">
+              <button type="button" onclick="setPresetDays(45)" class="px-2 py-0.5 rounded text-[11px] bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium border border-slate-700 transition">45d</button>
+              <button type="button" onclick="setPresetDays(60)" class="px-2 py-0.5 rounded text-[11px] bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium border border-slate-700 transition">60d</button>
+              <button type="button" onclick="setPresetDays(90)" class="px-2 py-0.5 rounded text-[11px] bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium border border-slate-700 transition">90d</button>
+              <button type="button" onclick="setPresetDays(120)" class="px-2 py-0.5 rounded text-[11px] bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium border border-slate-700 transition">120d</button>
+              <button type="button" onclick="setPresetDays(180)" class="px-2 py-0.5 rounded text-[11px] bg-indigo-600/30 hover:bg-indigo-600/40 text-indigo-300 font-medium border border-indigo-500/40 transition">180d</button>
+              <button type="button" onclick="setPresetDays(365)" class="px-2 py-0.5 rounded text-[11px] bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium border border-slate-700 transition">365d</button>
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Daily Study Capacity</label>
+            <select id="input-daily-hours" class="w-full px-3.5 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-indigo-500">
+              <option value="10">10 Hours / Day (Optimal)</option>
+              <option value="8">8 Hours / Day</option>
+              <option value="12">12 Hours / Day (Dropper)</option>
+              <option value="6">6 Hours / Day (School Going)</option>
+              <option value="4">4 Hours / Day (Light)</option>
+            </select>
+            <p class="text-[10px] text-slate-500 mt-2">Adjustable anytime with the Hour Guide slider.</p>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Start Date</label>
+          <input type="date" id="input-start-date" required class="w-full px-3.5 py-2 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-indigo-500" />
+        </div>
+
+        <div class="p-3 bg-indigo-950/40 rounded-xl border border-indigo-800/40 text-xs text-indigo-300">
+          💡 <strong>Built-in Spaced Repetition:</strong> Once generated, every chapter automatically schedules Day +1, Day +3, Day +7, and Day +21 revision checkpoints.
+        </div>
+
+        <div class="pt-2 flex justify-end gap-3">
+          <button type="button" onclick="closeTimelineModal()" class="px-4 py-2 rounded-xl text-sm font-semibold text-slate-400 hover:text-white">Cancel</button>
+          <button type="submit" class="px-5 py-2 rounded-xl text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/30">Generate Plan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: Log Actual Daily Hours -->
+  <div id="modal-log-study" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 shadow-2xl relative">
+      <button onclick="closeStudyLogModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">✕</button>
+      <h3 class="text-lg font-bold text-white mb-1">⏱️ Log Study Hours</h3>
+      <p class="text-xs text-slate-400 mb-4">Track actual hours spent today across each subject.</p>
+
+      <form onsubmit="handleSaveStudyLog(event)" class="space-y-3">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Date</label>
+          <input type="date" id="log-date" required class="w-full px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-700 text-sm text-white" />
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block text-xs text-emerald-400 font-semibold mb-1">Botany (Hours)</label>
+            <input type="number" step="0.5" id="log-botany" value="1.5" class="w-full px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-700 text-sm text-white" />
+          </div>
+          <div>
+            <label class="block text-xs text-cyan-400 font-semibold mb-1">Zoology (Hours)</label>
+            <input type="number" step="0.5" id="log-zoology" value="1.5" class="w-full px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-700 text-sm text-white" />
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block text-xs text-indigo-400 font-semibold mb-1">Physics (Hours)</label>
+            <input type="number" step="0.5" id="log-physics" value="2.5" class="w-full px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-700 text-sm text-white" />
+          </div>
+          <div>
+            <label class="block text-xs text-amber-400 font-semibold mb-1">Chemistry (Hours)</label>
+            <input type="number" step="0.5" id="log-chemistry" value="2.5" class="w-full px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-700 text-sm text-white" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs text-pink-400 font-semibold mb-1">Revision / Test (Hours)</label>
+          <input type="number" step="0.5" id="log-revision" value="1.5" class="w-full px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-700 text-sm text-white" />
+        </div>
+        <div class="pt-2 flex justify-end gap-2">
+          <button type="button" onclick="closeStudyLogModal()" class="px-3 py-1.5 rounded-lg text-sm text-slate-400 hover:text-white">Cancel</button>
+          <button type="submit" class="px-4 py-1.5 rounded-lg text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white">Save Log</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-auto border-t border-slate-900 bg-slate-950/80 py-6 text-center text-xs text-slate-500">
+    <p>NEETFlow • Open-Source NEET Prep Engine covering Botany, Zoology, Physics & Chemistry.</p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
