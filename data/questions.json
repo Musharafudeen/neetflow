@@ -1,0 +1,162 @@
+[
+  {
+    "id": "Q-BOT-01",
+    "subject": "Botany",
+    "chapter": "Principles of Inheritance and Variation",
+    "type": "MCQ",
+    "question": "In a dihybrid cross between AaBb x AaBb, what is the expected phenotypic ratio of offspring following standard Mendelian independent assortment?",
+    "options": ["9:3:3:1", "1:2:1", "9:7", "15:1"],
+    "correct_answer": "9:3:3:1",
+    "explanation": "According to Mendel's Law of Independent Assortment, a dihybrid cross involving two heterozygous individuals (AaBb x AaBb) produces four distinct phenotypes in the ratio 9 (both dominant) : 3 (first dominant, second recessive) : 3 (first recessive, second dominant) : 1 (both recessive)."
+  },
+  {
+    "id": "Q-BOT-02",
+    "subject": "Botany",
+    "chapter": "Molecular Basis of Inheritance",
+    "type": "WRITE_ANSWER",
+    "question": "What is the universal start codon in mRNA that also codes for the amino acid Methionine?",
+    "options": [],
+    "correct_answer": "AUG",
+    "explanation": "AUG is the universal initiator codon that binds to formyl-methionine tRNA in prokaryotes and methionine tRNA in eukaryotes to initiate protein synthesis."
+  },
+  {
+    "id": "Q-BOT-03",
+    "subject": "Botany",
+    "chapter": "Photosynthesis in Higher Plants",
+    "type": "MCQ",
+    "question": "Which enzyme is considered the most abundant protein in the whole biosphere and catalyzes carbon fixation in the Calvin cycle?",
+    "options": ["RuBisCO", "PEP carboxylase", "Carbonic anhydrase", "DNA Polymerase"],
+    "correct_answer": "RuBisCO",
+    "explanation": "Ribulose-1,5-bisphosphate carboxylase-oxygenase (RuBisCO) is the primary CO2-fixing enzyme in C3 plants and is considered the most abundant enzyme/protein in the biosphere."
+  },
+  {
+    "id": "Q-BOT-04",
+    "subject": "Botany",
+    "chapter": "Cell Cycle and Cell Division",
+    "type": "WRITE_ANSWER",
+    "question": "During which specific substage of Prophase I in Meiosis does crossing over (genetic recombination) occur?",
+    "options": [],
+    "correct_answer": "Pachytene",
+    "explanation": "Crossing over between non-sister chromatids of homologous chromosomes is catalyzed by the recombinase enzyme specifically during the Pachytene substage of Meiosis I."
+  },
+  {
+    "id": "Q-ZOO-01",
+    "subject": "Zoology",
+    "chapter": "Human Reproduction",
+    "type": "MCQ",
+    "question": "Which hormone surge causes the rupture of the Graafian follicle leading to ovulation in the human female menstrual cycle?",
+    "options": ["LH (Luteinizing Hormone)", "FSH (Follicle Stimulating Hormone)", "Progesterone", "Oxytocin"],
+    "correct_answer": "LH (Luteinizing Hormone)",
+    "explanation": "A rapid secretion of LH leading to its maximum level around the mid-cycle (14th day), known as the LH surge, induces the rupture of the mature Graafian follicle and releases the ovum (ovulation)."
+  },
+  {
+    "id": "Q-ZOO-02",
+    "subject": "Zoology",
+    "chapter": "Breathing and Exchange of Gases",
+    "type": "WRITE_ANSWER",
+    "question": "What is the normal Resting Tidal Volume (TV) of a healthy adult human in milliliters (mL)?",
+    "options": [],
+    "correct_answer": "500",
+    "explanation": "Tidal Volume (TV) is the volume of air inspired or expired during a normal respiration cycle, which is approximately 500 mL in a healthy adult."
+  },
+  {
+    "id": "Q-ZOO-03",
+    "subject": "Zoology",
+    "chapter": "Chemical Coordination and Integration",
+    "type": "MCQ",
+    "question": "Which of the following hormones is secreted by the intermediate lobe (Pars intermedia) of the pituitary gland in humans?",
+    "options": ["MSH (Melanocyte Stimulating Hormone)", "Prolactin", "TSH", "ACTH"],
+    "correct_answer": "MSH (Melanocyte Stimulating Hormone)",
+    "explanation": "Pars intermedia secretes only one hormone, Melanocyte Stimulating Hormone (MSH), which regulates pigmentation of the skin by acting on melanocytes."
+  },
+  {
+    "id": "Q-ZOO-04",
+    "subject": "Zoology",
+    "chapter": "Evolution",
+    "type": "WRITE_ANSWER",
+    "question": "In the Hardy-Weinberg equation (p^2 + 2pq + q^2 = 1), which mathematical term represents the frequency of heterozygous individuals in the population?",
+    "options": [],
+    "correct_answer": "2pq",
+    "explanation": "In Hardy-Weinberg equilibrium, p^2 represents the homozygous dominant genotype frequency, q^2 represents the homozygous recessive genotype frequency, and 2pq represents the heterozygous genotype frequency."
+  },
+  {
+    "id": "Q-PHY-01",
+    "subject": "Physics",
+    "chapter": "Electrostatics",
+    "type": "MCQ",
+    "question": "If the distance between two point charges is halved while their magnitudes remain constant, the electrostatic force between them becomes:",
+    "options": ["4 times", "2 times", "Halved", "1/4th"],
+    "correct_answer": "4 times",
+    "explanation": "By Coulomb's law, F = k * (q1 * q2) / r^2. If r becomes r/2, F' = k * (q1 * q2) / (r/2)^2 = 4 * F."
+  },
+  {
+    "id": "Q-PHY-02",
+    "subject": "Physics",
+    "chapter": "Current Electricity",
+    "type": "WRITE_ANSWER",
+    "question": "What is the equivalent resistance (in Ohms) when two identical resistors of 10 Ohms each are connected in parallel?",
+    "options": [],
+    "correct_answer": "5",
+    "explanation": "For two identical resistors connected in parallel: R_eq = (R1 * R2) / (R1 + R2) = (10 * 10) / (10 + 10) = 100 / 20 = 5 Ohms."
+  },
+  {
+    "id": "Q-PHY-03",
+    "subject": "Physics",
+    "chapter": "Laws of Motion",
+    "type": "MCQ",
+    "question": "A body of mass 2 kg moving with velocity 10 m/s is brought to rest in 2 seconds by a constant braking force. What is the magnitude of the force?",
+    "options": ["10 N", "20 N", "5 N", "40 N"],
+    "correct_answer": "10 N",
+    "explanation": "Acceleration a = (v - u) / t = (0 - 10) / 2 = -5 m/s^2. By Newton's second law, Force F = m * |a| = 2 kg * 5 m/s^2 = 10 N."
+  },
+  {
+    "id": "Q-PHY-04",
+    "subject": "Physics",
+    "chapter": "Ray Optics and Optical Instruments",
+    "type": "WRITE_ANSWER",
+    "question": "What is the SI unit of optical power of a lens?",
+    "options": [],
+    "correct_answer": "Dioptre",
+    "explanation": "Power of a lens P = 1 / f (where f is focal length in meters). Its SI unit is Dioptre (symbol D or m^-1)."
+  },
+  {
+    "id": "Q-CHM-01",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "type": "MCQ",
+    "question": "What is the hybridization and geometric shape of the Methane (CH4) molecule?",
+    "options": ["sp3, Tetrahedral", "sp2, Trigonal planar", "sp3d, Trigonal bipyramidal", "dsp2, Square planar"],
+    "correct_answer": "sp3, Tetrahedral",
+    "explanation": "Carbon in methane forms 4 single sigma bonds with 0 lone pairs. Steric number is 4, which corresponds to sp3 hybridization with tetrahedral geometry and bond angles of 109.5 degrees."
+  },
+  {
+    "id": "Q-CHM-02",
+    "subject": "Chemistry",
+    "chapter": "Equilibrium",
+    "type": "WRITE_ANSWER",
+    "question": "What is the pH of a neutral aqueous solution at 25 degrees Celsius?",
+    "options": [],
+    "correct_answer": "7",
+    "explanation": "At 25°C, pure water has [H+] = [OH-] = 10^-7 M. Therefore, pH = -log10(10^-7) = 7."
+  },
+  {
+    "id": "Q-CHM-03",
+    "subject": "Chemistry",
+    "chapter": "Organic Chemistry: Basic Principles & Techniques (GOC)",
+    "type": "MCQ",
+    "question": "Which of the following carbocations is the most stable due to maximum hyperconjugative and inductive stabilization?",
+    "options": ["(CH3)3C+ (tert-Butyl)", "(CH3)2CH+ (Isopropyl)", "CH3CH2+ (Ethyl)", "CH3+ (Methyl)"],
+    "correct_answer": "(CH3)3C+ (tert-Butyl)",
+    "explanation": "Tertiary carbocation (CH3)3C+ has 9 alpha-hydrogens providing 9 hyperconjugative structures, alongside +I inductive effect of three methyl groups, making it the most stable."
+  },
+  {
+    "id": "Q-CHM-04",
+    "subject": "Chemistry",
+    "chapter": "Chemical Kinetics",
+    "type": "WRITE_ANSWER",
+    "question": "For a first-order chemical reaction with rate constant k, what is the formula for its half-life (t1/2) in terms of k (up to 3 decimal places)?",
+    "options": [],
+    "correct_answer": "0.693/k",
+    "explanation": "For a first order reaction, t_1/2 = ln(2) / k = 0.693 / k, which is completely independent of initial reactant concentration."
+  }
+]
